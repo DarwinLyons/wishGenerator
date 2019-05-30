@@ -63,7 +63,7 @@ class App extends Component {
       <div className="App">
         <div className="wrapper">
           <div className="wrapperSmall">
-            <ul className="listContainer">
+            <ul className="listContainer" aria-live="polite" aria-atomic="true" aria-relevant="additions">
               {/* map over the user inputted wishes and display on the page */}
               {this.state.wishes.map((userInput) => {
                 return (
