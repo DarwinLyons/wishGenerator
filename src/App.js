@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
-import Header from './header.js'
+import Header from './header.js';
+import Form from './Form.js';
+import Wish from './Wish.js';
 import './App.css';
 
 class App extends Component {
@@ -59,36 +61,36 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ul>
-          {/* map over the user inputted wishes and display on the page */}
-          {this.state.wishes.map((wish) => {
-            console.log(wish);
-            return (
-              <div className="listContainer">
-                <li key={wish.key}>
-                <p>{wish.name}</p>
-                </li>
-                <li>test grid</li>
-                <li>test grid</li>
-                <li>test grid</li>
-              </div>
-            )
-          })}
-        </ul>
-        
-        <header>
-          <Header />
+        <div className="wrapper">
+          <div className="wrapperSmall">
+            <ul className="listContainer">
+              {/* map over the user inputted wishes and display on the page */}
+              {this.state.wishes.map((userInput) => {
+                return (
+                  // import wish componenet
+                  <Wish 
+                    singleWish={userInput}
+                    key={userInput.key}
+                  />
+                )
+              })}
+            </ul>
+            
+            <header>
+              {/* import header componenet */}
+              <Header />
+              {/* import form component */}
+              <Form 
+              whenChange={this.handleChange}
+              userValue={this.state.userInput}
+              userClick={this.handleClick}
+              />
 
-          <form action="">
-            {/* create user input, and bind to value */}
-            <input onChange ={this.handleChange} type="text" placeholder="Type your wish here" value={this.state.userInput}/>
-            {/* bind click event to button  */}
-            <button onClick={this.handleClick}>Send your wish</button>
-          </form>
+            </header>
+          </div>
+        </div>{/* wrapper */}
 
-        </header>
-        {/* Import Header */}
-      </div>
+        </div>
     )
   }
   //component 

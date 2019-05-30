@@ -4,6 +4,16 @@
   height: 100vh;
 }
 
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.wrapperSmall {
+  width: 80%;
+  margin: 0 auto;
+}
+
 /* Strip general styles from elements */
 
 ul {
@@ -13,6 +23,8 @@ ul {
 
 li {
   list-style: none;
+  border: 2px solid #9b3943;
+  /* border-radius: 50%; */
 }
 
 p {
@@ -24,21 +36,37 @@ p {
 
 body {
   color: #EBEAE9;
+  /* color: #d2d0d4; */
 }
 
 /* Style Header */
 
 header {
   position: relative;
-  top: 60vh;
+  top: 50vh;
 }
 
 /* Style dynamic li's */
 
+:root {
+  --rowNum: 4;
+  --colNum: 5;
+  --gridHeight: 120px;
+  --wrapperH: 40px;
+}
+
+.wrapper { 
+  height: var(--wrapperH);
+}
+
+
 .listContainer {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat( auto-fit, minmax(50px, 1fr) );
+  grid-gap: 10px 15px;
+  justify-items: center;
+  align-items: center;
 }
 
 
