@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
+import Swal from 'sweetalert2';
 import Header from './header.js';
 import Form from './Form.js';
 import Wish from './Wish.js';
@@ -35,8 +36,6 @@ class App extends Component {
         wishes: newState,
       })
     })
-
-    
     //componentDidMount  
   }
   //see when user changes input
@@ -46,17 +45,28 @@ class App extends Component {
     })
   }
 
+
   //see when user clicks button 
   handleClick = (event) => {
     event.preventDefault();
-    //save firbase data here
-    const dbRef = firebase.database().ref();
-    //push new input to state
-    dbRef.push(this.state.userInput);
-    //reset user input 
-    this.setState({
-      userInput: '',
-    })
+    const checkUserInput = this.state.userInput
+    console.log(checkUserInput);
+    if (checkUserInput === '' || checkUserInput === ' ' || checkUserInput === undefined) {
+      Swal.fire({
+        type: 'error',
+        text: 'Please enter a wish!',
+      })
+    } else {
+      //save firbase data here
+      const dbRef = firebase.database().ref();
+      //push new input to state
+      dbRef.push(this.state.userInput);
+      //reset user input 
+      this.setState({
+        userInput: '',
+      })
+
+    }
   }
   render() {
     return (
