@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
+import { Transition } from 'react-transition-group';
 import Swal from 'sweetalert2';
 import Header from './header.js';
 import Form from './Form.js';
 import Wish from './Wish.js';
 import './App.css';
+
 
 class App extends Component {
   constructor() {
@@ -13,6 +15,7 @@ class App extends Component {
     this.state = {
       wishes: [],
       userInput: '',
+      knownWishes: false,
     }
   }
   componentDidMount() {
@@ -22,18 +25,45 @@ class App extends Component {
     dbRef.on('value', (response) => {
       //variable for new state
       const newState = [];
+      //variable for the state of wishes on page load
+      const knownWishes = this.state.knownWishes
+      //variable for wishes added after original state
+      let newKnownWishes;
+      if (knownWishes === false){
+        //if known wishes is false, make newKnownWishes an empty array
+        newKnownWishes = [];
+      } else {
+        //if knownWishes has items in it, include the new known wishes
+        newKnownWishes = knownWishes;
+      }
       //variable that contains everything in the database
       const data = response.val();
       //looping through the firebase object and pushing new information to it, giving it the firebase key and a name
       for (let key in data) {
+        let wishData = data[key];
+        let wishIsNew = false;
+        if (knownWishes !== false){
+          //if known wishes is not false, and the wishe that we're looking at isn't known we're going mark it as new
+          if (knownWishes.includes(key) === false) {
+            wishIsNew = true
+            newKnownWishes.push(key)
+          }
+        
+        } else{
+          //add all keys to newKnownWishes
+          newKnownWishes.push(key)
+        }
         newState.push({
           key: key,
-          name: data[key],
+          name: wishData,
+          new: wishIsNew,
         });
       }
       //update previous state with new state array
       this.setState({
         wishes: newState,
+        //set known wishes to newKnownWishes, which tracks all the wishes on the page so we can animate anything new
+        knownWishes: newKnownWishes,
       })
     })
     //componentDidMount  
@@ -73,18 +103,22 @@ class App extends Component {
       <div className="App">
         <div className="wrapper">
           <div className="wrapperSmall">
-            <ul className="listContainer" aria-live="polite" aria-atomic="true" aria-relevant="additions">
+            <div className="listContainer" aria-live="polite" aria-atomic="true" aria-relevant="additions">
               {/* map over the user inputted wishes and display on the page */}
               {this.state.wishes.map((userInput) => {
                 return (
-                  // import wish componenet
-                  <Wish 
-                    singleWish={userInput}
-                    key={userInput.key}
-                  />
-                )
+                  <Transition in={true} timeout={1000}>
+                    {state => (
+                        // import wish componenet
+                        <Wish 
+                        singleWish={userInput}
+                        key={userInput.key}
+                        />
+                    )}
+                  </Transition>
+                  )
               })}
-            </ul>
+            </div>
             
             <header>
               {/* import header componenet */}
