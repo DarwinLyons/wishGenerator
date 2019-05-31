@@ -8,6 +8,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 html {
   font-size: 125%;
+  margin: 0;
+  top: 0;
 }
 
 .App {
@@ -26,12 +28,11 @@ html {
   margin: 0 auto;
 }
 
-/* Strip general styles from elements */
-
-ul {
-  padding: 15px 0;
-  margin: 0;
+.wishWrapper {
+  overflow: hidden;
 }
+
+/* Strip general styles from elements */
 
 p {
   padding: 0;
@@ -111,21 +112,15 @@ button:active {
 
 /* Style dynamic .animationTime's */
 
-.listContainer {
-  position: relative;
-  height: 100vh;
-}
-
 .animationTime {
   position: absolute;
 
 }
 
-
 .balloon { 
   border: 1px solid #9b3943;
   background: rgba(223, 125, 136, 0.7);
-  margin: 10px;
+  /* margin: 10px; */
   border-radius: 50%;
   height: 100px;
   width: 75px;
@@ -138,51 +133,56 @@ button:active {
 
 .animationTime::after {
   content: '';
+  
 
 }
 
 
 .animationTime:nth-of-type(even) {
-  top: 15px;
+  top: 10%;
   left: 0;
   z-index: 3;
   transform: rotate(10deg);
 }
 .animationTime:nth-of-type(odd) {
-  top: 0%;
+  top: 5%;
   left: 0;
   z-index: 4;
-  transform: rotate(-5deg);
+  transform: rotate(-10deg);
 }
 
 .animationTime:nth-child(3n) {
-  left: 50%;
+  top: 7%;
+  left: 65%;
   z-index: 3;
-  transform: rotate(-10deg);
+  transform: rotate(-5deg);
 }
 .animationTime:nth-child(4n) {
-  top: 0;
+  top:6%;
   left: 25%;
+  transform: rotate(5deg);
 }
 .animationTime:nth-child(5n) {
-  left: 50%;
+  top: 8%;
+  left: 40%;
   z-index: 4;
   transform: rotate(15deg);
 }
 .animationTime:nth-child(6n) {
-  top: 0;
-  left: 45%;
+  top: 10%;
+  left: 69%;
+  transform: rotate(-15deg);
 }
 .animationTime:nth-child(7n) {
-  top: 30px;
+  top: 9%;
   left: 40%;
-  transform: rotate(-20deg);
+  transform: rotate(20deg);
 }
 .animationTime:nth-child(9n){
-  top: 30px;
+  top: 5%;
   left: 45%;
+  transform: rotate(20deg);
 }
-
 
 .animationTime:hover {
   z-index: 9;
@@ -218,40 +218,40 @@ button:active {
     top: 35vh;
   }
   
-  .animationTime {
+  .balloon {
     height: 110px;
     width: 85px;
   }
   
   .animationTime:nth-child(5n) {
-    left: 60%;
+    top: 10%;
+    left: 70%;
   }
   
   .animationTime:nth-child(6n) {
-    top: 0;
-    left: 65%;
+    top: 15%;
+    left: 75%;
   }
   
   .animationTime:nth-child(9n){
-    top: 30px;
-    left: 65%;
+    top: 20%;
+    left: 78%;
   }
   
   .animationTime:nth-of-type(10n) {
     left: 15%;
   }
-  
-  /* .animationTime:last-of-type {
-    top: 70%;
-    left: 40%;
-    display: block;
-    margin: 0 auto;
-    z-index: 8;
-    transform: rotate(0);
-    background: rgba(223, 125, 136, 0.9); */
-    /* } */
-    
+
+  .animationTime:nth-of-type(11n) {
+    left: 50%;
   }
+
+  .animationTime:nth-of-type(15n) {
+    top: 5%;
+    left: 80%
+  }
+    
+}
   
   @media(min-width: 615px) {
     
@@ -259,7 +259,7 @@ button:active {
       font-size: 2rem;
     }
     
-    .animationTime {
+    .balloon {
       height: 120px;
       width: 95px;
     }
@@ -269,54 +269,78 @@ button:active {
     }
     
     .animationTime:nth-child(6n) {
-      top: 0;
+      top: 11%;
       left: 65%;
     }
     
     .animationTime:nth-child(9n){
-      top: 30px;
+      top: 15%;
       left: 65%;
     }
-    
-    /* .animationTime:last-of-type {
-      top: 70%;
-      left: 40%;
-      display: block;
-      margin: 0 auto;
-      z-index: 8;
-      transform: rotate(0);
-      background: rgba(223, 125, 136, 0.9);
-    } */
-    form {
-      width: 70%;
-      margin: 0 auto;
+
+    .animationTime:nth-of-type(11n) {
+      left: 50%;
     }
+
+    .animationTime:nth-of-type(12n) {
+      left: 30%;
+    }
+
+    .animationTime:nth-of-type(14n) {
+      left: 15%;
+    }
+
+  .animationTime:nth-of-type(15n) {
+    top: 5%;
+    left: 80%;
   }
+
+  .animationTime:nth-of-type(16n) {
+    left: 13%;
+  }
+
+  .animationTime:nth-of-type(17n) {
+    left: 17%;
+  }
+
+  form {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
   
   @media(min-width: 925px) {
     header {
       top: 40vh;
     }
-    .animationTime {
+    .balloon {
       height: 130px;
       width: 105px;
     } 
-    .animationTime:nth-of-type(11n) {
-      left: 10%;
+    .animationTime:nth-of-type(18n) {
+      left: 11%;
     }
-    .animationTime:nth-of-type(12n) {
-      left: 60%;
+
+     .animationTime:nth-of-type(19n) {
+      left: 7%;
+      top: 7%;
     }
-    
-    /* .animationTime:last-of-type {
-      top: 70%;
-      left: 40%;
-      display: block;
-      margin: 0 auto;
-      z-index: 8;
-      transform: rotate(0);
-      background: rgba(223, 125, 136, 0.9);
-    } */
+
+    .animationTime:nth-of-type(20n) {
+      left: 77%;
+    }
+
+    .animationTime:nth-of-type(21n) {
+      left: 57%;
+    }
+
+    .animationTime:nth-of-type(22n) {
+      left: 85%;
+    }
+
+    .animationTime:nth-of-type(23n) {
+      left: 87%;
+    }
     
     form {
       width: 60%
@@ -325,29 +349,22 @@ button:active {
   
   @media(min-width: 1100px) {
     
-    .animationTime {
+    .balloon {
       height: 140px;
       width: 115px;
     }  
-    .animationTime:nth-of-type(13n) {
-      left: 30%;
-    } 
-    .animationTime:nth-of-type(14n) {
-      left: 20%;
-    } 
-    .animationTime:nth-of-type(15n) {
-      left: 50%;
-    } 
     
-    /* .animationTime:last-of-type {
-      top: 70%;
-      left: 40%;
-      display: block;
-      margin: 0 auto;
-      z-index: 8;
-      transform: rotate(0);
-      background: rgba(223, 125, 136, 0.9);
-    } */
+    .animationTime:nth-of-type(24n) {
+      left: 35%;
+    }
+
+    .animationTime:nth-of-type(25n) {
+      left: 53%;
+    }
+
+    .animationTime:nth-of-type(26n) {
+      left: 43%;
+    }
     
     form {
       width: 30%;
@@ -370,28 +387,29 @@ button:active {
   
   
   .animationTime:last-of-type {
-    top: 0%;
-    left: 40%;
+    top: 10%;
+    left: 45%;
     display: block;
     margin: 0 auto;
     z-index: 8;
     transform: rotate(0);
-    background: rgba(223, 125, 136, 0.9);
     color: black;
   }
   
-  .animationTime.lastWish {
-    
+  .animationTime.lastWish { 
     animation: moveUpPage 15s 1 linear;
   }
 
   .animationTime.lastWish .balloon {
-    animation: wobble 1s alternate 15 ease-in-out;
+    animation: wobble 1s alternate 14 ease-in-out;
   }
 /* //from left to end where I want   */
   @keyframes moveUpPage {
     from{top: 100%}
-    to{top: 0%}
+    to{
+      top: 10%;
+      left: 45%;
+    }
   }
   @keyframes wobble {
     to{transform: translateX(50px)}
