@@ -43,13 +43,15 @@ p {
 /* General Text styles */
 
 body {
-  color: #EBEAE9;
+  /* color: #EBEAE9; */
   /* color: #d2d0d4; */
+  color: #16222d;
 }
 
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.7rem;
+  color: #EBEAE9;
 }
 
 /* Style Header */
@@ -57,6 +59,7 @@ h1 {
 header {
   position: relative;
   top: 20vh;
+  color: #EBEAE9;
 }
 
 /* form styles */
@@ -82,13 +85,10 @@ form input[type="text"] {
   padding: 10px 0;
   border-radius: 25px;
   border: 2px solid #9b3943;
-  background: rgba(223, 125, 136, 0.9);
+  background: rgba(223, 125, 136);
   color: #EBEAE9;
+  font-weight: bold;
   transition: background 0.5s, transform 0.5s, box-shadow 0.5s;
-}
-
-form input[type="text"] {
-  background: rgba(223, 125, 136, 0.3);
 }
 
 form button {
@@ -98,7 +98,7 @@ form button {
 
 form button:focus,
 form input[type="text"]:focus {
-  background: #f1bf98;
+  background: #283E51;
 }
 
 form input[type="text"]:active {
@@ -114,21 +114,22 @@ button:active {
 
 .animationTime {
   position: absolute;
+  font-size: 0.3rem;
+  border-radius: 50%;
+  transition: transform 0.7s, top 0.7s, left 0.7s;
 
 }
 
 .balloon { 
   border: 1px solid #9b3943;
   background: rgba(223, 125, 136, 0.7);
-  /* margin: 10px; */
   border-radius: 50%;
   height: 100px;
   width: 75px;
   text-align: center;
   padding: 20px;
   box-shadow: 1px 1px 5px #9b3943;
-  transition: transform 0.7s, top 0.7s, left 0.7s;
-  font-size: 0.6rem;
+
 }
 
 .animationTime::after {
@@ -184,11 +185,6 @@ button:active {
   transform: rotate(20deg);
 }
 
-.animationTime:hover {
-  z-index: 9;
-  transform: scale(2);
-  top: 100px;
-}
 
 /* alert */
 
@@ -235,182 +231,196 @@ button:active {
   
   .animationTime:nth-child(9n){
     top: 20%;
-    left: 78%;
+    left: 74%;
   }
   
   .animationTime:nth-of-type(10n) {
     left: 15%;
   }
-
+  
   .animationTime:nth-of-type(11n) {
     left: 50%;
   }
-
+  
   .animationTime:nth-of-type(15n) {
     top: 5%;
-    left: 80%
+    left: 75%;
   }
-    
-}
   
-  @media(min-width: 615px) {
-    
-    h1 {
-      font-size: 2rem;
-    }
-    
-    .balloon {
-      height: 120px;
-      width: 95px;
-    }
-    
-    .animationTime:nth-child(5n) {
-      left: 70%;
-    }
-    
-    .animationTime:nth-child(6n) {
-      top: 11%;
-      left: 65%;
-    }
-    
-    .animationTime:nth-child(9n){
-      top: 15%;
-      left: 65%;
-    }
+}
 
-    .animationTime:nth-of-type(11n) {
-      left: 50%;
-    }
-
-    .animationTime:nth-of-type(12n) {
-      left: 30%;
-    }
-
-    .animationTime:nth-of-type(14n) {
-      left: 15%;
-    }
-
+@media(min-width: 615px) {
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .balloon {
+    height: 120px;
+    width: 95px;
+  }
+  
+  .animationTime:nth-child(5n) {
+    left: 70%;
+  }
+  
+  .animationTime:nth-child(6n) {
+    top: 11%;
+    left: 65%;
+  }
+  
+  .animationTime:nth-child(9n){
+    top: 15%;
+    left: 65%;
+  }
+  
+  .animationTime:nth-of-type(11n) {
+    left: 50%;
+  }
+  
+  .animationTime:nth-of-type(12n) {
+    left: 30%;
+  }
+  
+  .animationTime:nth-of-type(14n) {
+    left: 15%;
+  }
+  
   .animationTime:nth-of-type(15n) {
     top: 5%;
     left: 80%;
   }
-
+  
   .animationTime:nth-of-type(16n) {
     left: 13%;
   }
-
+  
   .animationTime:nth-of-type(17n) {
     left: 17%;
   }
-
+  
   form {
     width: 70%;
     margin: 0 auto;
   }
 }
-  
-  @media(min-width: 925px) {
-    header {
-      top: 40vh;
-    }
-    .balloon {
-      height: 130px;
-      width: 105px;
-    } 
-    .animationTime:nth-of-type(18n) {
-      left: 11%;
-    }
 
-     .animationTime:nth-of-type(19n) {
-      left: 7%;
-      top: 7%;
-    }
-
-    .animationTime:nth-of-type(20n) {
-      left: 77%;
-    }
-
-    .animationTime:nth-of-type(21n) {
-      left: 57%;
-    }
-
-    .animationTime:nth-of-type(22n) {
-      left: 85%;
-    }
-
-    .animationTime:nth-of-type(23n) {
-      left: 87%;
-    }
-    
-    form {
-      width: 60%
-    }
+@media(min-width: 925px) {
+  header {
+    top: 40vh;
+  }
+  .balloon {
+    height: 130px;
+    width: 105px;
+  } 
+  .animationTime:nth-of-type(18n) {
+    left: 11%;
   }
   
-  @media(min-width: 1100px) {
-    
-    .balloon {
-      height: 140px;
-      width: 115px;
-    }  
-    
-    .animationTime:nth-of-type(24n) {
-      left: 35%;
-    }
+  .animationTime:nth-of-type(19n) {
+    left: 7%;
+    top: 7%;
+  }
+  
+  .animationTime:nth-of-type(20n) {
+    left: 77%;
+  }
+  
+  .animationTime:nth-of-type(21n) {
+    left: 57%;
+  }
+  
+  .animationTime:nth-of-type(22n) {
+    left: 85%;
+  }
+  
+  .animationTime:nth-of-type(23n) {
+    left: 87%;
+  }
+  
+  form {
+    width: 60%
+  }
+}
 
-    .animationTime:nth-of-type(25n) {
-      left: 53%;
-    }
+@media(min-width: 1100px) {
+  
+  .balloon {
+    height: 140px;
+    width: 115px;
+  }  
+  
+  .animationTime:nth-of-type(24n) {
+    left: 35%;
+  }
+  
+  .animationTime:nth-of-type(25n) {
+    left: 53%;
+  }
+  
+  .animationTime:nth-of-type(26n) {
+    left: 43%;
+  }
+  
+  form {
+    width: 30%;
+  }
+}
 
-    .animationTime:nth-of-type(26n) {
-      left: 43%;
-    }
-    
-    form {
-      width: 30%;
-    }
+@media(min-width: 1275px) {
+  header {
+    top: 45vh;
   }
-  
-  @media(min-width: 1275px) {
-    header {
-      top: 45vh;
-    }
+}
+
+
+
+@media(min-width: 1400px) {
+  header {
+    top: 60vh;
   }
-  
-  
-  
-  @media(min-width: 1400px) {
-    header {
-      top: 60vh;
-    }
-  }
-  
-  
-  .animationTime:last-of-type {
+}
+
+
+.animationTime:last-of-type {
+  top: 10%;
+  left: 45%;
+  display: block;
+  margin: 0 auto;
+  z-index: 8;
+  transform: rotate(0);
+  color: black;
+  font-size: 0.7rem;
+}
+
+.animationTime:hover {
+  z-index: 9;
+  transform: scale(2.5);
+  top: 25%;
+  left: 45%;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.balloon:hover {
+  padding: 15px;
+}
+
+.animationTime.lastWish { 
+  animation: moveUpPage 15s 1 linear;
+}
+
+.animationTime.lastWish .balloon {
+  animation: wobble 1s alternate 14 ease-in-out;
+}
+
+@keyframes moveUpPage {
+  from{top: 100%}
+  to{
     top: 10%;
     left: 45%;
-    display: block;
-    margin: 0 auto;
-    z-index: 8;
-    transform: rotate(0);
-    color: black;
   }
-  
-  .animationTime.lastWish { 
-    animation: moveUpPage 15s 1 linear;
-  }
-
-  .animationTime.lastWish .balloon {
-    animation: wobble 1s alternate 14 ease-in-out;
-  }
-/* //from left to end where I want   */
-  @keyframes moveUpPage {
-    from{top: 100%}
-    to{
-      top: 10%;
-      left: 45%;
-    }
-  }
-  @keyframes wobble {
-    to{transform: translateX(50px)}
-  }
+}
+@keyframes wobble {
+  to{transform: translateX(50px)}
+}

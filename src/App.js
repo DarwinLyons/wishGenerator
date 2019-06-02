@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
-import { Transition } from 'react-transition-group';
 import Swal from 'sweetalert2';
 import Header from './header.js';
 import Form from './Form.js';
@@ -16,8 +15,16 @@ class App extends Component {
       wishes: [],
       userInput: '',
       knownWishes: false,
+      hover: false,
     }
   }
+
+onMouseHover = (id) => {
+  this.setState({
+    hover: id
+  }) 
+}
+
   componentDidMount() {
     //create variable that holds a reference to database
     const dbRef = firebase.database().ref();
@@ -29,6 +36,7 @@ class App extends Component {
       const knownWishes = this.state.knownWishes
       //variable for wishes added after original state
       let newKnownWishes;
+      //if knownWishes is false, which I've set it to on page load, then do below
       if (knownWishes === false){
         //if known wishes is false, make newKnownWishes an empty array
         newKnownWishes = [];
@@ -40,19 +48,23 @@ class App extends Component {
       const data = response.val();
       //looping through the firebase object and pushing new information to it, giving it the firebase key and a name
       for (let key in data) {
+        //creating a variable for wishData that is the data and its key 
         let wishData = data[key];
+        //create a boolean value for new wishes
         let wishIsNew = false;
+        //if known wishes is not false then do below
         if (knownWishes !== false){
-          //if known wishes is not false, and the wishe that we're looking at isn't known we're going mark it as new
+          //if the wish that we're looking at isn't known we're going mark it as new
           if (knownWishes.includes(key) === false) {
             wishIsNew = true
+            //we're going to push new wishes to newKnownWishes
             newKnownWishes.push(key)
           }
-        
         } else{
           //add all keys to newKnownWishes
           newKnownWishes.push(key)
         }
+        //push to new state they key, the wishData and the newWish
         newState.push({
           key: key,
           name: wishData,
@@ -79,13 +91,15 @@ class App extends Component {
   //see when user clicks button 
   handleClick = (event) => {
     event.preventDefault();
+    //make a new variable that checkes userInput
     const checkUserInput = this.state.userInput
-    console.log(checkUserInput);
+    //if userInput is empty didplay an error
     if (checkUserInput === '' || checkUserInput === ' ' || checkUserInput === undefined) {
       Swal.fire({
         type: 'error',
         text: 'Please enter a wish!',
       })
+      //if userInput has something in it then
     } else {
       //save firbase data here
       const dbRef = firebase.database().ref();
@@ -107,15 +121,15 @@ class App extends Component {
               {/* map over the user inputted wishes and display on the page */}
               {this.state.wishes.map((userInput) => {
                 return (
-                  <Transition in={true} timeout={1000}>
-                    {state => (
+                   
                         // import wish componenet
                         <Wish 
+                        onMouseEnter={this.onMouseHover}
+                        hoverState={this.state.hover}
                         singleWish={userInput}
                         key={userInput.key}
                         />
-                    )}
-                  </Transition>
+                    
                   )
               })}
             </div>
