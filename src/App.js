@@ -10,12 +10,11 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    //provide state for my application 
+    //provide state for my application, create empty array for wishes, empty string to reset input and a boolean for the balloon animation
     this.state = {
       wishes: [],
       userInput: '',
       knownWishes: false,
-      hover: false,
     }
   }
 
@@ -26,7 +25,7 @@ class App extends Component {
     dbRef.on('value', (response) => {
       //variable for new state
       const newState = [];
-      //variable for the state of wishes on page load
+      //variable for the state of wishes on page load (Brent helped me with this)
       const knownWishes = this.state.knownWishes
       //variable for wishes added after original state
       let newKnownWishes;
@@ -81,7 +80,6 @@ class App extends Component {
     })
   }
 
-
   //see when user clicks button 
   handleClick = (event) => {
     event.preventDefault();
@@ -103,9 +101,9 @@ class App extends Component {
       this.setState({
         userInput: '',
       })
-
     }
   }
+  //what is being rendered to the page 
   render() {
     return (
       <div className="App">
@@ -115,13 +113,11 @@ class App extends Component {
               {/* map over the user inputted wishes and display on the page */}
               {this.state.wishes.map((userInput) => {
                 return (
-                   
                         // import wish componenet
                         <Wish 
                         singleWish={userInput}
                         key={userInput.key}
                         />
-                    
                   )
               })}
             </div>
@@ -135,12 +131,11 @@ class App extends Component {
               userValue={this.state.userInput}
               userClick={this.handleClick}
               />
-
             </header>
-          </div>
+          </div>{/* wrapperSmall */}
         </div>{/* wrapper */}
 
-        </div>
+      </div> // App
     )
   }
   //component 

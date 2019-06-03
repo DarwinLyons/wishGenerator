@@ -44,13 +44,13 @@ p {
 /* General Text styles */
 
 body {
-  color: #16222d;
+  color: rgba(22, 34, 45, 1);
 }
 
 h1 {
   font-family: 'Shrikhand', cursive;
   font-size: 1.7rem;
-  color: #EBEAE9;
+  color: rgba(235, 234, 233, 1);
   line-height: 1;
   margin: 0;
 }
@@ -60,7 +60,7 @@ h1 {
 header {
   position: relative;
   top: 30vh;
-  color: #EBEAE9;
+  color: rgba(235, 234, 233, 1);
 }
 
 header p {
@@ -83,7 +83,7 @@ form input[type="text"] {
   font-size: 1rem;
   text-align: center;
   font-family: 'Amatic SC', cursive;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -92,32 +92,32 @@ form input[type="text"] {
   margin: 5px 0;
   padding: 10px 0;
   border-radius: 25px;
-  border: 2px solid #9b3943;
+  border: 2px solid rgba(155, 57, 67, 1);
   background: rgba(223, 125, 136);
-  color: #EBEAE9;
+  color: rgba(235, 234, 233, 1);
   opacity: 1;
   font-weight: bold;
   transition: background 0.5s, transform 0.5s, box-shadow 0.5s;
 }
 
 form button {
-  box-shadow: 5px 5px #9b3943;
+  box-shadow: 5px 5px rgba(155, 57, 67, 1);
 }
 
 
 form button:focus,
 form input[type="text"]:focus {
-  background: #283E51;
+  background: rgba(40, 62, 81, 1);
   outline: 0;
 }
 
 form input[type="text"]:active {
-  background: #9b3943;
+  background: rgba(155, 57, 67, 1);
 }
 
 button:active {
     transform: translate(4px, 4px);
-    box-shadow: 1px 1px  #9b3943; 
+    box-shadow: 1px 1px  rgba(155, 57, 67, 1); 
 }
 
 /* Style dynamic .animationTime's and .balloon */
@@ -131,42 +131,14 @@ button:active {
 
 .balloon { 
   position: relative;
-  border: 1px solid #9b3943;
+  border: 1px solid rgba(155, 57, 67, 1);
   background: rgba(223, 125, 136, 0.7);
   border-radius: 50%;
   height: 100px;
   width: 75px;
   text-align: center;
-  box-shadow: 0 0 6px #9b3943;
+  box-shadow: 0 0 6px rgba(155, 57, 67, 1);
   padding: 15px;
-}
-
-.balloon::before {
-  position: absolute;
-  content: '';
-  height: 50%;
-  width: 45px;
-  border: 2px solid #9b3943;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  border-radius: 50%;
-  top: 97%;
-  left: 45%;
-}
-
-.balloon::after {
-  position: absolute;
-  content: '';
-  height: 50%;
-  width: 45px;
-  border: 2px solid #9b3943;
-  border-top: none;
-  border-left: none;
-  border-bottom: none;
-  border-radius: 50%;
-  top: 146%;
-  left: 38%;
 }
 
 .animationTime:nth-of-type(even) {
@@ -188,6 +160,7 @@ button:active {
   z-index: 3;
   transform: rotate(-5deg);
 }
+
 .animationTime:nth-child(4n) {
   top:6%;
   left: 25%;
@@ -220,45 +193,73 @@ button:active {
 
 .swal2-popup {
   font-family: 'Amatic SC', cursive;
-  background: #f1bf98;
-  color: #283E51;
+  background: rgba(241, 191, 152, 1);
+  color: rgba(40, 62, 81, 1);
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 .swal2-confirm.swal2-styled {
   font-family: 'Amatic SC', cursive;
-  background: #283E51;
-  color: #EBEAE9;
+  background: rgba(40, 62, 81, 1);
+  color: rgba(235, 234, 233, 1);
   font-weight: bold;
 }
 
 /* start of responsive */
 
-@media(min-width: 425px) {
+@media(min-width: 436px) {
   
   header {
-    top: 35vh;
+    top: 37vh;
   }
   
   .balloon {
     height: 110px;
     width: 85px;
   }
+
+  .balloon::before {
+  position: absolute;
+  content: '';
+  height: 40%;
+  width: 30px;
+  border: 2px solid rgba(155, 57, 67, 1);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 50%;
+  top: 97%;
+  left: 45%;
+}
+
+.balloon::after {
+  position: absolute;
+  content: '';
+  height: 40%;
+  width: 30px;
+  border: 2px solid rgba(155, 57, 67, 1);
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 50%;
+  top: 133%;
+  left: 33%;
+}
   
   .animationTime:nth-child(5n) {
     top: 10%;
-    left: 70%;
+    left: 68%;
   }
   
   .animationTime:nth-child(6n) {
-    top: 15%;
-    left: 75%;
+    top: 7%;
+    left: 63%;
   }
   
   .animationTime:nth-child(9n){
-    top: 20%;
-    left: 74%;
+    top: 15%;
+    left: 72%;
   }
   
   .animationTime:nth-of-type(10n) {
@@ -271,7 +272,7 @@ button:active {
   
   .animationTime:nth-of-type(15n) {
     top: 5%;
-    left: 75%;
+    left: 73%;
   }
   
 }
@@ -282,6 +283,10 @@ button:active {
     font-size: 2.5rem;
   }
 
+  header {
+    top: 43vh;
+  }
+
   header p {
     padding-top: 10px;
   }
@@ -290,6 +295,12 @@ button:active {
     padding: 10px 0;
     margin: 10px 0;
   }
+
+  form input::placeholder,
+  form button, 
+  form input[type="text"] {
+    font-size: 1.5rem;
+  }
   
   .balloon {
     height: 120px;
@@ -297,7 +308,7 @@ button:active {
   }
   
   .animationTime:nth-child(5n) {
-    left: 70%;
+    left: 55%;
   }
   
   .animationTime:nth-child(6n) {
@@ -324,7 +335,7 @@ button:active {
   
   .animationTime:nth-of-type(15n) {
     top: 5%;
-    left: 80%;
+    left: 75%;
   }
   
   .animationTime:nth-of-type(16n) {
@@ -342,8 +353,9 @@ button:active {
 }
 
 @media(min-width: 925px) {
-  header {
-    top: 40vh;
+
+  form {
+    width: 60%;
   }
   .balloon {
     height: 130px;
@@ -371,7 +383,7 @@ button:active {
   }
   
   .animationTime:nth-of-type(23n) {
-    left: 87%;
+    left: 80%;
   }
   
   form {
@@ -380,6 +392,10 @@ button:active {
 }
 
 @media(min-width: 1100px) {
+
+   header {
+    top: 47vh;
+  }
   
   .balloon {
     height: 140px;
@@ -405,7 +421,7 @@ button:active {
 
 @media(min-width: 1275px) {
   header {
-    top: 45vh;
+    top: 50vh;
   }
 }
 
