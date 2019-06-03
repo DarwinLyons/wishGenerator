@@ -144,13 +144,13 @@ button:active {
 
 .animationTime:nth-of-type(even) {
   top: 10%;
-  left: 5%;
+  left: 15%;
   z-index: 3;
   transform: rotate(10deg);
 }
 .animationTime:nth-of-type(odd) {
   top: 5%;
-  left: 7%;
+  left: 10%;
   z-index: 4;
   transform: rotate(-10deg);
 }
