@@ -59,13 +59,13 @@ h1 {
 
 header {
   position: relative;
-  top: 22vh;
+  top: 30vh;
   color: #EBEAE9;
 }
 
 header p {
   font-size: 1.5rem;
-  padding-top: 10px;
+  padding-top: 0;
 }
 
 /* form styles */
@@ -73,8 +73,8 @@ header p {
 form {
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
-  padding: 10px 0;
+  margin: 0;
+  padding: 0;
 }
 
 form input::placeholder,
@@ -120,17 +120,17 @@ button:active {
     box-shadow: 1px 1px  #9b3943; 
 }
 
-/* Style dynamic .animationTime's */
+/* Style dynamic .animationTime's and .balloon */
 
 .animationTime {
   position: absolute;
   font-size: 0.3rem;
   border-radius: 50%;
   transition: transform 0.7s, top 0.7s, left 0.7s;
-
 }
 
 .balloon { 
+  position: relative;
   border: 1px solid #9b3943;
   background: rgba(223, 125, 136, 0.7);
   border-radius: 50%;
@@ -139,7 +139,34 @@ button:active {
   text-align: center;
   box-shadow: 1px 1px 5px #9b3943;
   padding: 15px;
+}
 
+.balloon::before {
+  position: absolute;
+  content: '';
+  height: 50%;
+  width: 45px;
+  border: 2px solid #9b3943;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 50%;
+  top: 97%;
+  left: 45%;
+}
+
+.balloon::after {
+  position: absolute;
+  content: '';
+  height: 50%;
+  width: 45px;
+  border: 2px solid #9b3943;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 50%;
+  top: 146%;
+  left: 38%;
 }
 
 .animationTime:nth-of-type(even) {
@@ -192,15 +219,18 @@ button:active {
 /* alert */
 
 .swal2-popup {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Amatic SC', cursive;
   background: #f1bf98;
   color: #283E51;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .swal2-confirm.swal2-styled {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Amatic SC', cursive;
   background: #283E51;
   color: #EBEAE9;
+  font-weight: bold;
 }
 
 /* start of responsive */
@@ -250,6 +280,15 @@ button:active {
   
   h1 {
     font-size: 2.5rem;
+  }
+
+  header p {
+    padding-top: 10px;
+  }
+
+  form {
+    padding: 10px 0;
+    margin: 10px 0;
   }
   
   .balloon {
