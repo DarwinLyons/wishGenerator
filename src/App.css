@@ -38,6 +38,7 @@ p {
   padding: 0;
   margin: 0;
   font-family: 'Amatic SC', cursive;
+  text-transform: uppercase;
 }
 
 /* General Text styles */
@@ -58,12 +59,13 @@ h1 {
 
 header {
   position: relative;
-  top: 25vh;
+  top: 22vh;
   color: #EBEAE9;
 }
 
 header p {
   font-size: 1.5rem;
+  padding-top: 10px;
 }
 
 /* form styles */
@@ -72,7 +74,7 @@ form {
   display: flex;
   flex-direction: column;
   margin: 10px 0;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 form input::placeholder,
@@ -93,6 +95,7 @@ form input[type="text"] {
   border: 2px solid #9b3943;
   background: rgba(223, 125, 136);
   color: #EBEAE9;
+  opacity: 1;
   font-weight: bold;
   transition: background 0.5s, transform 0.5s, box-shadow 0.5s;
 }
@@ -105,6 +108,7 @@ form button {
 form button:focus,
 form input[type="text"]:focus {
   background: #283E51;
+  outline: 0;
 }
 
 form input[type="text"]:active {
@@ -134,19 +138,19 @@ button:active {
   width: 75px;
   text-align: center;
   box-shadow: 1px 1px 5px #9b3943;
-  padding: 10px;
+  padding: 15px;
 
 }
 
 .animationTime:nth-of-type(even) {
   top: 10%;
-  left: 0;
+  left: 5%;
   z-index: 3;
   transform: rotate(10deg);
 }
 .animationTime:nth-of-type(odd) {
   top: 5%;
-  left: 0;
+  left: 7%;
   z-index: 4;
   transform: rotate(-10deg);
 }
