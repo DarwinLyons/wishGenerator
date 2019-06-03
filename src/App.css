@@ -137,7 +137,7 @@ button:active {
   height: 100px;
   width: 75px;
   text-align: center;
-  box-shadow: 1px 1px 5px #9b3943;
+  box-shadow: 0 0 6px #9b3943;
   padding: 15px;
 }
 

@@ -118,8 +118,6 @@ class App extends Component {
                    
                         // import wish componenet
                         <Wish 
-                        onMouseEnter={this.onMouseHover}
-                        hoverState={this.state.hover}
                         singleWish={userInput}
                         key={userInput.key}
                         />
