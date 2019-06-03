@@ -5,6 +5,7 @@ class Form extends Component {
    return (
      <form action="">
         {/* create user input, and bind to value */}
+        
         <input onChange={this.props.whenChange} 
         type="text" 
         placeholder="Type your wish here" 
