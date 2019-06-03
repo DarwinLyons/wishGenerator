@@ -37,29 +37,33 @@ html {
 p {
   padding: 0;
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Amatic SC', cursive;
 }
 
 /* General Text styles */
 
 body {
-  /* color: #EBEAE9; */
-  /* color: #d2d0d4; */
   color: #16222d;
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Shrikhand', cursive;
   font-size: 1.7rem;
   color: #EBEAE9;
+  line-height: 1;
+  margin: 0;
 }
 
 /* Style Header */
 
 header {
   position: relative;
-  top: 20vh;
+  top: 25vh;
   color: #EBEAE9;
+}
+
+header p {
+  font-size: 1.5rem;
 }
 
 /* form styles */
@@ -76,7 +80,9 @@ form button,
 form input[type="text"] {
   font-size: 1rem;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 form button,
@@ -127,17 +133,10 @@ button:active {
   height: 100px;
   width: 75px;
   text-align: center;
-  padding: 20px;
   box-shadow: 1px 1px 5px #9b3943;
+  padding: 10px;
 
 }
-
-.animationTime::after {
-  content: '';
-  
-
-}
-
 
 .animationTime:nth-of-type(even) {
   top: 10%;
@@ -202,12 +201,6 @@ button:active {
 
 /* start of responsive */
 
-@media(min-width: 375px) {
-  header {
-    top: 30vh;
-  }
-}
-
 @media(min-width: 425px) {
   
   header {
@@ -252,7 +245,7 @@ button:active {
 @media(min-width: 615px) {
   
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   
   .balloon {
@@ -381,7 +374,7 @@ button:active {
   }
 }
 
-
+/* Style last of type and hover at the bottom so media queries don't override */
 .animationTime:last-of-type {
   top: 10%;
   left: 45%;
@@ -389,7 +382,6 @@ button:active {
   margin: 0 auto;
   z-index: 8;
   transform: rotate(0);
-  color: black;
   font-size: 0.7rem;
 }
 
@@ -397,13 +389,12 @@ button:active {
   z-index: 9;
   transform: scale(2.5);
   top: 25%;
-  left: 45%;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 0;
 }
 
 .balloon:hover {
-  padding: 15px;
+  padding-top: 10px;
 }
 
 .animationTime.lastWish { 

@@ -19,12 +19,6 @@ class App extends Component {
     }
   }
 
-onMouseHover = (id) => {
-  this.setState({
-    hover: id
-  }) 
-}
-
   componentDidMount() {
     //create variable that holds a reference to database
     const dbRef = firebase.database().ref();
