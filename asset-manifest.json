@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/DarwinLyons/darwin-lyons-project-five/static/css/main.afdcf47f.chunk.css",
-    "main.js": "/DarwinLyons/darwin-lyons-project-five/static/js/main.769b6dab.chunk.js",
-    "main.js.map": "/DarwinLyons/darwin-lyons-project-five/static/js/main.769b6dab.chunk.js.map",
-    "runtime~main.js": "/DarwinLyons/darwin-lyons-project-five/static/js/runtime~main.d7655ca6.js",
-    "runtime~main.js.map": "/DarwinLyons/darwin-lyons-project-five/static/js/runtime~main.d7655ca6.js.map",
-    "static/js/2.7a0b886a.chunk.js": "/DarwinLyons/darwin-lyons-project-five/static/js/2.7a0b886a.chunk.js",
-    "static/js/2.7a0b886a.chunk.js.map": "/DarwinLyons/darwin-lyons-project-five/static/js/2.7a0b886a.chunk.js.map",
-    "index.html": "/DarwinLyons/darwin-lyons-project-five/index.html",
-    "precache-manifest.711507200470c121970e087bd1852537.js": "/DarwinLyons/darwin-lyons-project-five/precache-manifest.711507200470c121970e087bd1852537.js",
-    "service-worker.js": "/DarwinLyons/darwin-lyons-project-five/service-worker.js",
-    "static/css/main.afdcf47f.chunk.css.map": "/DarwinLyons/darwin-lyons-project-five/static/css/main.afdcf47f.chunk.css.map"
+    "main.css": "/darwin-lyons-project-five/static/css/main.666b25b2.chunk.css",
+    "main.js": "/darwin-lyons-project-five/static/js/main.096ea3b0.chunk.js",
+    "main.js.map": "/darwin-lyons-project-five/static/js/main.096ea3b0.chunk.js.map",
+    "runtime~main.js": "/darwin-lyons-project-five/static/js/runtime~main.6bda0cf6.js",
+    "runtime~main.js.map": "/darwin-lyons-project-five/static/js/runtime~main.6bda0cf6.js.map",
+    "static/js/2.aa7b02bf.chunk.js": "/darwin-lyons-project-five/static/js/2.aa7b02bf.chunk.js",
+    "static/js/2.aa7b02bf.chunk.js.map": "/darwin-lyons-project-five/static/js/2.aa7b02bf.chunk.js.map",
+    "index.html": "/darwin-lyons-project-five/index.html",
+    "precache-manifest.7a77cb2ce42fbe4ae8b5b8e2a1966126.js": "/darwin-lyons-project-five/precache-manifest.7a77cb2ce42fbe4ae8b5b8e2a1966126.js",
+    "service-worker.js": "/darwin-lyons-project-five/service-worker.js",
+    "static/css/main.666b25b2.chunk.css.map": "/darwin-lyons-project-five/static/css/main.666b25b2.chunk.css.map"
   }
 }
