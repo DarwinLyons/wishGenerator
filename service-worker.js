@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/darwin-lyons-project-five/precache-manifest.6eadc4de868c8884ca9097a5d1925948.js"
+  "/darwin-lyons-project-five/precache-manifest.9144d0ae79b30fc10d3ea8b547af8e48.js"
 );
 
 self.addEventListener('message', (event) => {
