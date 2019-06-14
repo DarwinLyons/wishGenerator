@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/darwin-lyons-project-five/static/css/main.168c677a.chunk.css",
-    "main.js": "/darwin-lyons-project-five/static/js/main.04a74faa.chunk.js",
-    "main.js.map": "/darwin-lyons-project-five/static/js/main.04a74faa.chunk.js.map",
-    "runtime~main.js": "/darwin-lyons-project-five/static/js/runtime~main.6bda0cf6.js",
-    "runtime~main.js.map": "/darwin-lyons-project-five/static/js/runtime~main.6bda0cf6.js.map",
-    "static/js/2.aa7b02bf.chunk.js": "/darwin-lyons-project-five/static/js/2.aa7b02bf.chunk.js",
-    "static/js/2.aa7b02bf.chunk.js.map": "/darwin-lyons-project-five/static/js/2.aa7b02bf.chunk.js.map",
-    "index.html": "/darwin-lyons-project-five/index.html",
-    "precache-manifest.ce16606e62f576ef2fbcddce5b15cc50.js": "/darwin-lyons-project-five/precache-manifest.ce16606e62f576ef2fbcddce5b15cc50.js",
-    "service-worker.js": "/darwin-lyons-project-five/service-worker.js",
-    "static/css/main.168c677a.chunk.css.map": "/darwin-lyons-project-five/static/css/main.168c677a.chunk.css.map"
+    "main.css": "/wishGenerator/static/css/main.168c677a.chunk.css",
+    "main.js": "/wishGenerator/static/js/main.7d36af97.chunk.js",
+    "main.js.map": "/wishGenerator/static/js/main.7d36af97.chunk.js.map",
+    "runtime~main.js": "/wishGenerator/static/js/runtime~main.ce2584e2.js",
+    "runtime~main.js.map": "/wishGenerator/static/js/runtime~main.ce2584e2.js.map",
+    "static/js/2.00e5fd4f.chunk.js": "/wishGenerator/static/js/2.00e5fd4f.chunk.js",
+    "static/js/2.00e5fd4f.chunk.js.map": "/wishGenerator/static/js/2.00e5fd4f.chunk.js.map",
+    "index.html": "/wishGenerator/index.html",
+    "precache-manifest.5739619f26c0af19cff21ef60dcbd5f0.js": "/wishGenerator/precache-manifest.5739619f26c0af19cff21ef60dcbd5f0.js",
+    "service-worker.js": "/wishGenerator/service-worker.js",
+    "static/css/main.168c677a.chunk.css.map": "/wishGenerator/static/css/main.168c677a.chunk.css.map"
   }
 }
