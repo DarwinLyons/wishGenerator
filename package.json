@@ -1,7 +1,7 @@
 {
   "name": "darwin-lyons-project-five",
   "version": "0.1.0",
-  "homepage": "https://darwinlyons.github.io/darwin-lyons-project-five/",
+  "homepage": "https://darwinlyons.github.io/wishGenerator/",
   "private": true,
   "dependencies": {
     "firebase": "^6.1.0",
