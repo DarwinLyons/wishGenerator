@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/wishGenerator/static/css/main.168c677a.chunk.css",
-    "main.js": "/wishGenerator/static/js/main.7d36af97.chunk.js",
-    "main.js.map": "/wishGenerator/static/js/main.7d36af97.chunk.js.map",
+    "main.js": "/wishGenerator/static/js/main.49b829bf.chunk.js",
+    "main.js.map": "/wishGenerator/static/js/main.49b829bf.chunk.js.map",
     "runtime~main.js": "/wishGenerator/static/js/runtime~main.ce2584e2.js",
     "runtime~main.js.map": "/wishGenerator/static/js/runtime~main.ce2584e2.js.map",
     "static/js/2.00e5fd4f.chunk.js": "/wishGenerator/static/js/2.00e5fd4f.chunk.js",
     "static/js/2.00e5fd4f.chunk.js.map": "/wishGenerator/static/js/2.00e5fd4f.chunk.js.map",
     "index.html": "/wishGenerator/index.html",
-    "precache-manifest.5739619f26c0af19cff21ef60dcbd5f0.js": "/wishGenerator/precache-manifest.5739619f26c0af19cff21ef60dcbd5f0.js",
+    "precache-manifest.735d24cc48b52e8e3b8344f7f672e073.js": "/wishGenerator/precache-manifest.735d24cc48b52e8e3b8344f7f672e073.js",
     "service-worker.js": "/wishGenerator/service-worker.js",
     "static/css/main.168c677a.chunk.css.map": "/wishGenerator/static/css/main.168c677a.chunk.css.map"
   }
