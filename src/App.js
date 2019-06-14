@@ -113,11 +113,11 @@ class App extends Component {
               {/* map over the user inputted wishes and display on the page */}
               {this.state.wishes.map((userInput) => {
                 return (
-                        // import wish componenet
-                        <Wish 
-                        singleWish={userInput}
-                        key={userInput.key}
-                        />
+                  // import wish componenet
+                  <Wish 
+                  singleWish={userInput}
+                  key={userInput.key}
+                  />
                   )
               })}
             </div>
