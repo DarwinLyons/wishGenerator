@@ -102,6 +102,11 @@ form input[type="text"] {
 
 form button {
   box-shadow: 5px 5px rgba(155, 57, 67, 1);
+  transition: color 0.2s, background 0.2s;
+}
+
+form button:hover {
+  background: rgba(155, 57, 67, 0.5);
 }
 
 
@@ -139,6 +144,9 @@ button:active {
   text-align: center;
   box-shadow: 0 0 6px rgba(155, 57, 67, 1);
   padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .animationTime:nth-of-type(even) {
